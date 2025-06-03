@@ -1,20 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <title>Portafolio de Julian</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; }
-    h1 { color: #2c3e50; }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .contacto p {
+      margin: 5px 0;
+    }
   </style>
 </head>
 <body>
-  <h1>Hola, soy Julian 👋</h1>
-  <p>Soy desarrollador de software con interés en frontend.</p>
-  <h2>Proyectos</h2>
-  <ul>
-    <li><a href="https://github.com/julian2398/proyecto1">Proyecto 1</a></li>
-    <li><a href="https://github.com/julian2398/proyecto2">Proyecto 2</a></li>
-  </ul>
+
+  <header>
+    <h1>Hola, soy Julian 👋</h1>
+    <p>Desarrollador de software apasionado por el frontend</p>
+  </header>
+
+  <section>
+    <h2>Sobre mí</h2>
+    <p>Soy estudiante de Ingeniería de Software, con interés en el desarrollo frontend. Me gusta crear interfaces modernas, funcionales y fáciles de usar.</p>
+  </section>
+
+  <section>
+    <h2>Proyectos</h2>
+    <ul>
+      <li><a href="https://github.com/julian2398/proyecto1" target="_blank">Proyecto 1</a>: Descripción breve del proyecto.</li>
+      <li><a href="https://github.com/julian2398/proyecto2" target="_blank">Proyecto 2</a>: Descripción breve del proyecto.</li>
+    </ul>
+  </section>
+
+  <section class="contacto">
+    <h2>Contacto</h2>
+    <p>📧 Email: julian@example.com</p>
+    <p>💼 LinkedIn: <a href="https://linkedin.com/in/tuusuario" target="_blank">linkedin.com/in/tuusuario</a></p>
+    <p>🐱 GitHub: <a href="https://github.com/julian2398" target="_blank">github.com/julian2398</a></p>
+  </section>
+
 </body>
 </html>
