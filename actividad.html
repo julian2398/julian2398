@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actividades Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  
+    <h1>Actividades Python en la Web</h1>
+    
+    <h2>Suma de dos números</h2>
+    <form method="post" action="/sumar">
+        <input type="number" name="num1" placeholder="Número 1" required>
+        <input type="number" name="num2" placeholder="Número 2" required>
+        <button type="submit">Sumar</button>
+    </form>
+    {% if suma %}
+        <p>Resultado: {{ suma }}</p>
+    {% endif %}
+
+    <h2>Conversión Celsius a Fahrenheit</h2>
+    <form method="post" action="/celsius_to_fahrenheit">
+        <input type="number" name="celsius" placeholder="Celsius" required>
+        <button type="submit">Convertir</button>
+    </form>
+    {% if fahrenheit %}
+        <p>Resultado: {{ fahrenheit }}°F</p>
+    {% endif %}
+
+    <h2>Área de un triángulo</h2>
+    <form method="post" action="/area_triangulo">
+        <input type="number" name="base" placeholder="Base" required>
+        <input type="number" name="altura" placeholder="Altura" required>
+        <button type="submit">Calcular</button>
+    </form>
+    {% if area %}
+        <p>Área: {{ area }}</p>
+    {% endif %}
+
+    <h2>Par o Impar</h2>
+    <form method="post" action="/par_impar">
+        <input type="number" name="numero" placeholder="Número" required>
+        <button type="submit">Verificar</button>
+    </form>
+    {% if par_impar %}
+        <p>El número es: {{ par_impar }}</p>
+    {% endif %}
+    
+    <h2>Intercambio de valores</h2>
+    <form method="post" action="/intercambiar_valores">
+        <input type="text" name="a" placeholder="Valor A" required>
+        <input type="text" name="b" placeholder="Valor B" required>
+        <button type="submit">Intercambiar</button>
+    </form>
+    {% if a and b %}
+        <p>Valores intercambiados: A = {{ a }}, B = {{ b }}</p>
+    {% endif %}
+    
+    <h2>Calculadora</h2>
+    <form method="post" action="/calculadora">
+        <input type="number" name="num1" placeholder="Número 1" required>
+        <input type="number" name="num2" placeholder="Número 2" required>
+        <select name="operacion">
+            <option value="suma">Suma</option>
+            <option value="resta">Resta</option>
+            <option value="multiplicacion">Multiplicación</option>
+            <option value="division">División</option>
+        </select>
+        <button type="submit">Calcular</button>
+    </form>
+    {% if calculadora %}
+        <p>Resultado: {{ calculadora }}</p>
+    {% endif %}
+</body>
+</html>
